@@ -1,1 +1,1 @@
-# Random Chrome Background Extension
+# Random Background Chrome Extension
