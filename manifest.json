@@ -2,9 +2,30 @@
   "name": "Random Image",
   "version": "1.0",
   "description": "A random  background image generator",
-  "permissions": ["storage"],
-  "background": {
-    "service_worker": "background.js"
+  "permissions": ["activeTab"],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
   },
-  "manifest_version": 3
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "Random Image",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "manifest_version": 2
 }
