@@ -4,6 +4,7 @@ const ready = (callback) => {
   else document.addEventListener("DOMContentLoaded", callback);
 };
 
+// TODO: Add images dynamically from extension settings
 const setRandomImage = () => {
   const IMG_URL = "https://thailand-exp-images.s3-us-west-2.amazonaws.com/";
   const backgroundImages = [
@@ -29,6 +30,7 @@ const setRandomImage = () => {
 
   const randomImage =
     backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+
   pageBody.style.backgroundImage = `url(${IMG_URL}${randomImage})`;
 };
 
